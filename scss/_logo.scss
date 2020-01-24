@@ -1,0 +1,20 @@
+.logo {
+  display: inline-block;
+  color: #1D1D1D;
+  margin-left: -2px;
+  width: 213px;
+  .maintext {
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 41px;
+    letter-spacing: 0.02em;
+  }
+
+  .subtext {
+    font-weight: 300;
+    font-size: 10px;
+    line-height: 12px;
+    margin-top: -7px;
+    margin-left: 1px;
+  }
+}

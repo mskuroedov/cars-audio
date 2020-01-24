@@ -1,0 +1,105 @@
+.header {
+  padding-top: 40px;
+
+  .search-form {
+    //width: 550px;
+    .input{
+      flex: 1;
+    }
+    .select{
+      .list{
+        background: white;
+      }
+    }
+    .input, .select {
+      background: white;
+    }
+  }
+
+  &__phones {
+    display: flex;
+    align-items: center;
+    padding-top: 4px;
+  }
+
+  &__phone-text {
+    display: inline-block;
+    font-size: 14px;
+    .text {
+      font-weight: normal;
+      line-height: 20px;
+      letter-spacing: 0.01em;
+      color: #4B4B4B;
+    }
+
+    .link {
+      font-style: normal;
+      font-weight: normal;
+      line-height: 20px;
+      letter-spacing: 0.01em;
+      color: #4B4B4B;
+
+      &:hover {
+        color: $darkred;
+        text-decoration: none;
+      }
+    }
+
+    @media (max-width: 390px) {
+      font-size: 10px;
+    }
+  }
+
+  &__phone {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 35px;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.01em;
+    color: #000000;
+    margin-left: 24px;
+
+    &:hover {
+      text-decoration: none;
+      color: $darkred;
+    }
+    @media (max-width: 390px) {
+      font-size: 18px;
+    }
+  }
+
+  .navbar{
+    margin-bottom: 8px;
+    .navbar-toggler{
+      background: #D8D8D8;
+    }
+    .navbar-toggler-icon{
+      background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0, 0, 0, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+    }
+    .nav-item {
+      margin-right: 53px;
+      a{
+        font-style: normal;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 26px;
+        letter-spacing: 0.01em;
+        color: #000000;
+        padding: 14px 0;
+      }
+    }
+  }
+
+  &.service{
+    background: url("../assets/service-bg-jumbotron.png");
+    background-position: center;
+    height: 466px;
+    background-position-y: 96%;
+    @media(max-width: 992px){
+      height: auto;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+  }
+}

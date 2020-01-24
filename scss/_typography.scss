@@ -1,0 +1,38 @@
+.main-title{
+  font-weight: 600;
+  font-size: 26px;
+  margin-bottom: 20px;
+  line-height: 38px;
+  min-height: 45px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.04em;
+  color: #000000;
+}
+
+.page-title{
+  font-style: normal;
+  font-weight: bold;
+  font-size: 42px;
+  line-height: 45px;
+  margin-bottom: 0;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.04em;
+  color: #000000;
+  @media(max-width: 767px){
+    font-size: 25px;
+  }
+  &__container{
+    display: flex;
+    margin-top: 31px;
+    align-items: center;
+    margin-bottom: 47px;
+    flex-wrap: wrap;
+    .select{
+      //margin-left: 24px;
+    }
+  }
+}
