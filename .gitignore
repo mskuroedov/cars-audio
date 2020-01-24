@@ -1,0 +1,4 @@
+.*
+node_modules
+pp
+package-lock.json

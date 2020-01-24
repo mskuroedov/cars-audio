@@ -3,14 +3,16 @@
 
   .search-form {
     //width: 550px;
-    .input{
+    .input {
       flex: 1;
     }
-    .select{
-      .list{
+
+    .select {
+      .list {
         background: white;
       }
     }
+
     .input, .select {
       background: white;
     }
@@ -25,6 +27,7 @@
   &__phone-text {
     display: inline-block;
     font-size: 14px;
+
     .text {
       font-weight: normal;
       line-height: 20px;
@@ -64,22 +67,27 @@
       text-decoration: none;
       color: $darkred;
     }
+
     @media (max-width: 390px) {
       font-size: 18px;
     }
   }
 
-  .navbar{
+  .navbar {
     margin-bottom: 8px;
-    .navbar-toggler{
+
+    .navbar-toggler {
       background: #D8D8D8;
     }
-    .navbar-toggler-icon{
+
+    .navbar-toggler-icon {
       background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0, 0, 0, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
     }
+
     .nav-item {
       margin-right: 53px;
-      a{
+
+      a {
         font-style: normal;
         font-weight: 600;
         font-size: 18px;
@@ -91,12 +99,14 @@
     }
   }
 
-  &.service{
+  &.service {
     background: url("../assets/service-bg-jumbotron.png");
     background-position: center;
     height: 466px;
     background-position-y: 96%;
-    @media(max-width: 992px){
+    @media(max-width: 992px) {
+
+      background-position-x: 32%;
       height: auto;
       background-repeat: no-repeat;
       background-size: cover;

@@ -1,5 +1,5 @@
 .service {
-  padding-top: 43px;
+  padding-top: 40px;
 
   &__header__container {
     padding-top: 13px;
@@ -164,5 +164,8 @@
   .regional {
     padding-top: 31px;
     padding-bottom: 87px;
+    @media(max-width: 992px){
+      padding-bottom: 30px;
+    }
   }
 }

@@ -45,11 +45,13 @@
   }
 
   .lSPager {
+    padding-top: 5px !important;
     padding-bottom: 46px;
 
     li {
-      height: 108px !important;
-      width: 108px !important;
+      max-height: 108px;
+      //height: 108px !important;
+      //width: 108px !important;
 
       &.active {
         background: #FFFFFF;
@@ -62,6 +64,9 @@
         justify-content: center;
         padding: 26px;
         height: 100%;
+        @media(max-width: 992px){
+          padding: 8px;
+        }
       }
     }
   }
@@ -176,6 +181,7 @@
         width: 100%;
         border-right: 0;
       }
+
       &[aria-expanded="true"], &:hover {
         color: #D70000;
 
@@ -187,29 +193,36 @@
         border-right: 0;
       }
 
-      &.downloads {
-        padding: 10px 42px 10px 30px;
-        line-height: 1.5;
-        font-style: normal;
-        font-weight: 500;
-        font-size: 22px;
-        height: auto;
-        display: flex;
-        align-items: center;
-        text-align: center;
-        letter-spacing: 0.01em;
-        color: #FFFFFF;
-        background: #1C3F9A;
+      @media(min-width: 993px){
+        &.downloads {
+          padding: 10px 42px 10px 30px;
+          line-height: 1.5;
+          font-style: normal;
+          font-weight: 500;
+          font-size: 22px;
+          height: auto;
+          display: flex;
+          align-items: center;
+          text-align: center;
+          letter-spacing: 0.01em;
+          color: #FFFFFF;
+          background: #1C3F9A;
 
-        img {
-          margin-right: 10px;
-        }
+          img {
+            margin-right: 10px;
+          }
 
-        &:hover {
-          color: white;
-          background: darken(#1C3F9A, 7);
+          &:hover {
+            color: white;
+            background: darken(#1C3F9A, 7);
+          }
         }
       }
+        &.downloads{
+          img{
+            display: none;
+          }
+        }
     }
   }
 
@@ -244,10 +257,12 @@
         flex-wrap: wrap;
        .name{
          width: 100%;
+         line-height: 20px;
        }
         .val{
           width: 100%;
-          margin-bottom: 16px;
+          line-height: 20px;
+          margin-bottom: 24px;
         }
       }
       .name {

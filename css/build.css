@@ -106,6 +106,7 @@ button, input, a {
     background-position-y: 96%; }
     @media (max-width: 992px) {
       .header.service {
+        background-position-x: 32%;
         height: auto;
         background-repeat: no-repeat;
         background-size: cover; } }
@@ -849,10 +850,10 @@ button, input, a {
       height: 100%;
       padding: 60px; }
   .ci .lSPager {
+    padding-top: 5px !important;
     padding-bottom: 46px; }
     .ci .lSPager li {
-      height: 108px !important;
-      width: 108px !important; }
+      max-height: 108px; }
       .ci .lSPager li.active {
         background: #FFFFFF;
         box-shadow: 8px 10px 20px rgba(0, 0, 0, 0.2); }
@@ -862,6 +863,9 @@ button, input, a {
         justify-content: center;
         padding: 26px;
         height: 100%; }
+        @media (max-width: 992px) {
+          .ci .lSPager li a {
+            padding: 8px; } }
   .ci__description {
     display: flex;
     flex-direction: column;
@@ -962,24 +966,27 @@ button, input, a {
         pointer-events: none; }
       .ci-about__nav__item:last-of-type {
         border-right: 0; }
-      .ci-about__nav__item.downloads {
-        padding: 10px 42px 10px 30px;
-        line-height: 1.5;
-        font-style: normal;
-        font-weight: 500;
-        font-size: 22px;
-        height: auto;
-        display: flex;
-        align-items: center;
-        text-align: center;
-        letter-spacing: 0.01em;
-        color: #FFFFFF;
-        background: #1C3F9A; }
-        .ci-about__nav__item.downloads img {
-          margin-right: 10px; }
-        .ci-about__nav__item.downloads:hover {
-          color: white;
-          background: #17337c; }
+      @media (min-width: 993px) {
+        .ci-about__nav__item.downloads {
+          padding: 10px 42px 10px 30px;
+          line-height: 1.5;
+          font-style: normal;
+          font-weight: 500;
+          font-size: 22px;
+          height: auto;
+          display: flex;
+          align-items: center;
+          text-align: center;
+          letter-spacing: 0.01em;
+          color: #FFFFFF;
+          background: #1C3F9A; }
+          .ci-about__nav__item.downloads img {
+            margin-right: 10px; }
+          .ci-about__nav__item.downloads:hover {
+            color: white;
+            background: #17337c; } }
+      .ci-about__nav__item.downloads img {
+        display: none; }
   .ci-about__card {
     background: white;
     position: relative;
@@ -1008,10 +1015,12 @@ button, input, a {
         .ci-about__card__item {
           flex-wrap: wrap; }
           .ci-about__card__item .name {
-            width: 100%; }
+            width: 100%;
+            line-height: 20px; }
           .ci-about__card__item .val {
             width: 100%;
-            margin-bottom: 16px; } }
+            line-height: 20px;
+            margin-bottom: 24px; } }
       .ci-about__card__item .name {
         min-width: 205px;
         position: relative; }
@@ -1048,7 +1057,7 @@ button, input, a {
         margin-left: 2px; }
 
 .service {
-  padding-top: 43px; }
+  padding-top: 40px; }
   .service__header__container {
     padding-top: 13px; }
   .service__header {
@@ -1167,6 +1176,9 @@ button, input, a {
   .service .regional {
     padding-top: 31px;
     padding-bottom: 87px; }
+    @media (max-width: 992px) {
+      .service .regional {
+        padding-bottom: 30px; } }
 
 .item-news {
   background: white;
@@ -1412,6 +1424,9 @@ button, input, a {
   background: white;
   padding-bottom: 30px;
   padding-top: 35px; }
+  @media (max-width: 992px) {
+    .footer {
+      padding-top: 16px; } }
   .footer__link {
     font-style: normal;
     font-weight: normal;
@@ -1461,6 +1476,9 @@ button, input, a {
     .footer__phones[href]:hover {
       color: #AE0000;
       text-decoration: none; }
+    @media (max-width: 992px) {
+      .footer__phones:first-of-type {
+        margin-top: 16px; } }
   .footer__2-row {
     margin-top: 26px;
     padding-top: 27px;
