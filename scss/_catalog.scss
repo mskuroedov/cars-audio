@@ -1,20 +1,23 @@
-.catalog{
+.catalog {
 
 
-  &__item{
+  &__item {
     position: relative;
     background: white;
     margin-bottom: 28px;
     cursor: pointer;
-    &:hover{
-      .catalog__item__img img{
+
+    &:hover {
+      .catalog__item__img img {
         transform: scale(1.1);
       }
-      .catalog__item__info{
+
+      .catalog__item__info {
         background: white;
       }
     }
-    &__top-label{
+
+    &__top-label {
       position: absolute;
       left: 0;
       top: 0;
@@ -29,7 +32,9 @@
       text-align: center;
       padding: 2px 8px;
     }
-    &__img{    position: relative;
+
+    &__img {
+      position: relative;
       z-index: 2;
       text-align: center;
       padding-top: 11px;
@@ -39,14 +44,16 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      img{
+
+      img {
         max-width: 100%;
         max-height: 100%;
         height: 100%;
         transition: all .2s;
       }
     }
-    &__info{
+
+    &__info {
       position: relative;
       z-index: 1;
       background: linear-gradient(180deg, rgba(181, 181, 181, 0.25) 0%, rgba(255, 255, 255, 0) 8.29%), #FAFAFA;
@@ -56,7 +63,8 @@
       height: 112px;
       padding: 11px 13px 3px;
       transition: all .2s;
-      .name{
+
+      .name {
         width: 100%;
         text-align: center;
         font-style: normal;
@@ -71,11 +79,13 @@
         max-height: 70px;
         margin-bottom: auto;
       }
-      .secondary{
+
+      .secondary {
         display: flex;
         justify-content: space-between;
       }
-      .article{
+
+      .article {
 
         font-weight: 500;
         font-size: 14px;
@@ -86,9 +96,11 @@
 
         color: #4B4B4B;
       }
-      .type{
+
+      .type {
         margin-left: auto;
-        .icon{
+
+        .icon {
           height: 32px;
           margin-top: -6px;
           margin-left: 3px;
@@ -98,45 +110,30 @@
     }
   }
 
-  &__pagination{
+  &__pagination {
     display: flex;
     align-items: center;
-    margin-top: 10px;
-    margin-bottom: 50px;
-    .arrow{
-      cursor: pointer;
-      margin: 0 18px;
+    justify-content: flex-start;
+    margin-bottom: 48px;
+
+    .item {
+      width: 43px;
+      height: 43px;
+      color: #000;
+      background: transparent;
       transition: all .2s;
-      &.--disabled{
-        opacity: .6;
-        pointer-events: none;
-        &:hover{
-          opacity: 1;
-        }
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 100%;
+      margin: 0 5.5px;
+      &:first-of-type{
+        margin-left: 0;
       }
-      &.--left{
-        margin-right: 21px;
-      }
-      &.--right{
-        margin-left: 24px;
-      }
-      &:hover{
-        opacity: .8;
-      }
-    }
-    .dot{
-      cursor: pointer;
-      margin: 0 5px;
-      width: 8px;
-      height: 8px;
-      border-radius: 4px;
-      background: #C4C4C4;
-      transition: all .2s;
-      &.--active{
-        background: #585858;
-      }
-      &:hover{
-        background: lighten(#585858,7);
+      &:hover, &.--active {
+        background: #0D5BB2;
+        color: white;
+        text-decoration: none;
       }
     }
   }
