@@ -42,8 +42,14 @@
       height: 100%;
       padding: 60px;
     }
+    .clone{
+      padding:60px;
+    }
   }
-
+  .lSSlideOuter{
+    //padding-right: 40px;
+    //width: calc(100% + 25px);
+  }
   .lSPager {
     padding-top: 5px !important;
     padding-bottom: 46px;
@@ -52,10 +58,13 @@
       max-height: 108px;
       //height: 108px !important;
       //width: 108px !important;
-
       &.active {
-        background: #FFFFFF;
-        box-shadow: 8px 10px 20px rgba(0, 0, 0, 0.2);
+        overflow: visible;
+
+        a{
+          background: #FFFFFF;
+          box-shadow: 8px 10px 20px rgba(0, 0, 0, 0.2);
+        }
       }
 
       a {

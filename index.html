@@ -1115,43 +1115,72 @@
     })
 </script>
 <script>
-    var advSlider = $('.adv-slider');
-    advSlider.owlCarousel({
-        items: 1,
-        margin: 0,
-        dots: true
-    });
-    var latestSlider = $('.latest-items-slider');
-    latestSlider.owlCarousel({
-        items: 4,
-        nav: true,
-        margin: 40,
-        dots: true,
-        navText: ["<img src='./assets/icons/arrow_prev.svg'>", "<img src='./assets/icons/arrow_next.svg'>"],
-        onInitialized: function () {
-            $('.latest-items-slider .owl-dots').insertBefore($('.latest-items-slider .owl-nav .owl-next'))
-        },
-        responsive: {
-            0: {
-                items: 1,
-                slideBy: 1
-            },
-            768: {
-                items: 2,
-                slideBy: 2
-            },
-            993: {
-                items: 3,
-                slideBy: 3
-            },
-            1200: {
-                items: 4,
-                slideBy: 4
-            }
-        }
-    });
     $(document).ready(function () {
         $('select').niceSelect();
+
+        var advSlider = $('.adv-slider');
+        advSlider.owlCarousel({
+            items: 1,
+            margin: 0,
+            dots: true
+        });
+
+        var latestSlider = $('.latest-items-slider');
+        latestSlider.on('initialized.owl.carousel resized.owl.carousel', function () {
+            var viewport = $(window).width();
+            var itemCount = $(".latest-items-slider .catalog__item").length;
+
+            if ((viewport >= 1200 && itemCount > 4) //desktop
+                || ((viewport >= 993 && viewport < 1199) && itemCount > 3) //desktopsmall
+                || ((viewport >= 768 && viewport < 992) && itemCount > 2) //tablet
+                || (viewport < 767 && itemCount > 1) //mobile
+            ) {
+                $('.latest-items-slider .owl-nav').show();
+            } else {
+                $('.latest-items-slider .owl-nav').hide();
+            }
+        })
+        latestSlider.owlCarousel({
+            items: 4,
+            nav: true,
+            margin: 40,
+            dots: true,
+            navText: ["<img src='./assets/icons/arrow_prev.svg'>", "<img src='./assets/icons/arrow_next.svg'>"],
+            onInitialized: function () {
+                $('.latest-items-slider .owl-dots').insertBefore($('.latest-items-slider .owl-nav .owl-next'));
+
+                var viewport = $(window).width();
+                var itemCount = $(".latest-items-slider .catalog__item").length;
+
+                if ((viewport >= 1200 && itemCount > 4) //desktop
+                    || ((viewport >= 993 && viewport < 1199) && itemCount > 3) //desktopsmall
+                    || ((viewport >= 768 && viewport < 992) && itemCount > 2) //tablet
+                    || (viewport < 767 && itemCount > 1) //mobile
+                ) {
+                    $('.latest-items-slider .owl-nav').show();
+                } else {
+                    $('.latest-items-slider .owl-nav').hide();
+                }
+            },
+            responsive: {
+                0: {
+                    items: 1,
+                    slideBy: 1
+                },
+                768: {
+                    items: 2,
+                    slideBy: 2
+                },
+                993: {
+                    items: 3,
+                    slideBy: 3
+                },
+                1200: {
+                    items: 4,
+                    slideBy: 4
+                }
+            }
+        });
     });
 </script>
 </body>

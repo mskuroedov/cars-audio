@@ -34,6 +34,10 @@
       color: #262626;
       .text{
         cursor: pointer;
+        max-width: 100%;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
       }
       .icon {
         margin-left: auto;

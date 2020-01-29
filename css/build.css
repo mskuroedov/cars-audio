@@ -193,7 +193,11 @@ button, input, a {
     cursor: pointer;
     color: #262626; }
     .side-bar__select__item .text {
-      cursor: pointer; }
+      cursor: pointer;
+      max-width: 100%;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis; }
     .side-bar__select__item .icon {
       margin-left: auto;
       margin-right: 18px; }
@@ -472,7 +476,11 @@ button, input, a {
     text-align: center;
     padding-top: 11px;
     padding-bottom: 14px;
-    overflow: hidden; }
+    min-height: 237px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center; }
     .catalog__item__img img {
       max-width: 100%;
       max-height: 100%;
@@ -849,14 +857,18 @@ button, input, a {
       align-items: center;
       height: 100%;
       padding: 60px; }
+    .ci__slider .clone {
+      padding: 60px; }
   .ci .lSPager {
     padding-top: 5px !important;
     padding-bottom: 46px; }
     .ci .lSPager li {
       max-height: 108px; }
       .ci .lSPager li.active {
-        background: #FFFFFF;
-        box-shadow: 8px 10px 20px rgba(0, 0, 0, 0.2); }
+        overflow: visible; }
+        .ci .lSPager li.active a {
+          background: #FFFFFF;
+          box-shadow: 8px 10px 20px rgba(0, 0, 0, 0.2); }
       .ci .lSPager li a {
         display: flex;
         align-items: center;
